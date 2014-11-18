@@ -1,5 +1,5 @@
-FROM phusion/baseimage:0.9.6
-MAINTAINER Alexander Jung-Loddenkemper <alexander@julo.ch>
+FROM phusion/baseimage:0.9.15
+MAINTAINER Marek Chowaniok 
 
 # Set correct environment variables.
 ENV HOME /root
