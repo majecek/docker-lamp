@@ -12,7 +12,7 @@ RUN /etc/my_init.d/00_regen_ssh_host_keys.sh
 # update the package sources
 RUN apt-get update
 # we use the enviroment variable to stop debconf from asking questions..
-RUN DEBIAN_FRONTEND='noninteractive' apt-get install -y mysql-server php5 php5-cli php5-mysql mysql-client-core-5.5 nginx php5-fpm
+RUN DEBIAN_FRONTEND='noninteractive' apt-get install -y mysql-server-5.6 php5 php5-cli php5-mysql nginx php5-fpm
 
 # package install is finished, clean up
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
@@ -34,7 +34,7 @@ RUN mkdir -p /run/fpm
 RUN rm -rf /tmp/* /var/tmp/*
 
 # Create mount directory for http
-VOLUME ['/srv/http']
+VOLUME /srv/http
 
 # expose nginx
 EXPOSE 80
