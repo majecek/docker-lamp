@@ -1,5 +1,7 @@
+MJ, fish: `boot2docker ssh ssh -t -t -i insecure_key "root@"(docker inspect -f "{{ .NetworkSettings.IPAddress }}" lamp)`
 
-ha!
+
+
 # docker-lamp (ubuntu based)
 A simple and mostly automatic LAMP setup. Well, actually it is more like a LNMP, as I use nginx in favour of apache, but everybody uses the term and in this context I doubt there are many usecases where it matters.
 
