@@ -41,12 +41,12 @@
 
 	DROP TABLE IF EXISTS `orders`;
 	CREATE TABLE `orders` (
-	  `id` int(11) NOT NULL AUTO_INCREMENT,
-	  `user` int(11) NOT NULL,
+	  `id`       int(11)    NOT NULL AUTO_INCREMENT,
+	  `user`     int(11)    NOT NULL,
 	  `finished` tinyint(4) NOT NULL DEFAULT '0',
-	  `sent` tinyint(4) NOT NULL DEFAULT '0',
-	  `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	  `data` text COLLATE utf8_czech_ci NOT NULL,
+	  `sent`     tinyint(4) NOT NULL DEFAULT '0',
+	  `time`     datetime   NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	  `data`     text       COLLATE utf8_czech_ci NOT NULL,
 	  PRIMARY KEY (`id`),
 	  KEY `user` (`user`),
 	  CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`user`) REFERENCES `users` (`id`)
