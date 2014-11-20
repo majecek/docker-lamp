@@ -27,6 +27,13 @@ ADD mysqld.service /etc/service/mysqld/run
 ADD php-fpm.service /etc/service/php-fpm/run
 ADD nginx.service /etc/service/nginx/run
 
+
+# add mysql scripts
+ADD init_db.sh /tmp/init_db.sh
+ADD forte.sql /tmp/forte.sql
+RUN chmod 755 /tmp/*.sh
+CMD ["/tmp/init_db.sh"]
+
 # add socket directory for php-fpm
 RUN mkdir -p /run/fpm
 
@@ -40,4 +47,5 @@ VOLUME /srv/http
 EXPOSE 80
 
 # Use baseimage-docker's init system.
+
 CMD ["/sbin/my_init"]
