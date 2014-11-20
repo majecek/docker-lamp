@@ -36,7 +36,7 @@
 	  `sent` datetime NOT NULL,
 	  `used` tinyint(4) NOT NULL DEFAULT '0',
 	  PRIMARY KEY (`id`)
-	) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+	) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
 
 
 	DROP TABLE IF EXISTS `orders`;
@@ -67,7 +67,7 @@
 	  KEY `users_id` (`users_id`),
 	  CONSTRAINT `slevy_ibfk_1` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`),
 	  CONSTRAINT `slevy_ibfk_2` FOREIGN KEY (`users_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
-	) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+	) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_czech_ci;
 
 
 	DROP TABLE IF EXISTS `texts`;
