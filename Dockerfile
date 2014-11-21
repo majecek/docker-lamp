@@ -3,7 +3,6 @@ MAINTAINER Marek Chowaniok
 
 # Set correct environment variables.
 ENV HOME /root
-ENV DOCKER true
 
 # Regenerate SSH host keys. baseimage-docker does not contain any, so you
 # have to do that yourself. You may also comment out this instruction; the
@@ -33,6 +32,8 @@ ADD forte.sql /root/forte.sql
 ADD globalni_slevy.sql /root/globalni_slevy.sql
 ADD init_db.sh /etc/my_init.d/01_init_db.sh
 RUN chmod 755 /etc/my_init.d/01_init_db.sh
+
+ADD is_docker /srv/is_docker
 
 # add socket directory for php-fpm
 RUN mkdir -p /run/fpm
