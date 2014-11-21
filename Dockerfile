@@ -3,6 +3,7 @@ MAINTAINER Marek Chowaniok
 
 # Set correct environment variables.
 ENV HOME /root
+ENV DOCKER true
 
 # Regenerate SSH host keys. baseimage-docker does not contain any, so you
 # have to do that yourself. You may also comment out this instruction; the
@@ -27,7 +28,6 @@ ADD mysqld.service /etc/service/mysqld/run
 ADD php-fpm.service /etc/service/php-fpm/run
 ADD nginx.service /etc/service/nginx/run
 
-
 # add mysql scripts
 ADD forte.sql /root/forte.sql
 ADD globalni_slevy.sql /root/globalni_slevy.sql
@@ -40,12 +40,8 @@ RUN mkdir -p /run/fpm
 # clean up tmp files (we don't need them for the image)
 RUN rm -rf /tmp/* /var/tmp/*
 
-# Create mount directory for http
-VOLUME /srv/http
-
 # expose nginx
 EXPOSE 80
 
 # Use baseimage-docker's init system.
-
 CMD ["/sbin/my_init"]
