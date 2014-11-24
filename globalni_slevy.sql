@@ -31,4 +31,5 @@ INSERT INTO `texts` (`id`, `nazev`, `obsah`, `poznamka`) VALUES
 (22,	'Nabídka tisku - Textil',	'Nabízíme široké spektrum textilu a jeho následný potisk sítotiskovou technologií, která nabízí vynikající kvalitu a stálost barev i po četném praní. Dodací lhůty jsou 3-14 dní v závislosti na množství a vytíženosti oddělení. <strong>Tato kategorie je v přípravě. Pro kalkulaci nás prosím kontaktujte na <a href=\"mailto:objednavka@fortetisk.cz\">objednavka@fortetisk.cz</a>.</strong>',	'Pozor na e-mail. Aby to fungovalo, musí být odkaz ve tvaru: mailto:objednavka@fortetisk.cz');
 
 INSERT INTO `users` (`id`, `email`, `password`, `role`, `osoba`, `jmeno`, `prijmeni`, `ico`, `nazev`, `mobil`, `adresa_fakturacni`, `adresa_dorucovaci`, `newsletter`, `last_login`, `active`) VALUES
-(1,	'GLOBÁLNÍ SLEVA',	'',	'',	'',	'',	'',	'',	'',	'',	'',	'',	NULL,	'0000-00-00',	0);
+(1,	'GLOBÁLNÍ SLEVA',	'',	'',	'',	'',	'',	'',	'',	'',	'',	'',	NULL,	'0000-00-00',	0),
+(2,	'a@a.cz',	'$2y$10$Qr792AMjBkG1n1tLTbodfuIad37.yC9VH5HSxAKsBRgaXkupfL7nC',	'zakaznik',	'spotrebitel',	'a',	'b',	'',	'',	'123',	'abcdefg 123\nhijkl\n789 09',	'abcdefg 123\nhijkl\n789 09',	1,	'2014-11-24',	1);
