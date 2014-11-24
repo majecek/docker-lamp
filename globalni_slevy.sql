@@ -4,7 +4,8 @@ SET foreign_key_checks = 0;
 SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
 INSERT INTO `slevy` (`id`, `users_id`, `plakaty`, `vizitky`, `brozury`, `kalendare`, `velkoplosny`, `textil`) VALUES
-(1,	1,	0,	0,	0,	0,	0,	0);
+(1,	1,	0,	0,	0,	0,	0,	0),
+(2,	2,	5,	5,	5,	5,	5,	5);
 
 INSERT INTO `texts` (`id`, `nazev`, `obsah`, `poznamka`) VALUES
 (1,	'banner - košík - jednorázový nákup',	'<p><strong>Registrujte&nbsp;se</strong> na&nbsp;str&aacute;nk&aacute;ch Forte&nbsp;tisk a z&iacute;skejte na&nbsp;v&scaron;echny n&aacute;kupy <strong>5%&nbsp;SLEVU</strong>. Pro z&iacute;sk&aacute;n&iacute; slevy je nutno <a href=\"#\">kliknout zde</a>&nbsp;a registrovat se.</p>',	'Jakýkoliv odkaz zde přesměruje na registraci. Jako \"neutrální\" odkaz jde použít znak #.'),
