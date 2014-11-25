@@ -4,8 +4,9 @@ SET foreign_key_checks = 0;
 SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
 INSERT INTO `slevy` (`id`, `users_id`, `plakaty`, `vizitky`, `brozury`, `kalendare`, `velkoplosny`, `textil`) VALUES
-(1,	1,	0,	0,	0,	0,	0,	0),
-(2,	2,	5,	5,	5,	5,	5,	5);
+(1,	1,	0,	20,	0,	0,	0,	0),
+(2,	2,	5,	5,	5,	5,	5,	5),
+(3,	3,	5,	5,	5,	5,	5,	5);
 
 INSERT INTO `texts` (`id`, `nazev`, `obsah`, `poznamka`) VALUES
 (1,	'banner - košík - jednorázový nákup',	'<p><strong>Registrujte&nbsp;se</strong> na&nbsp;str&aacute;nk&aacute;ch Forte&nbsp;tisk a z&iacute;skejte na&nbsp;v&scaron;echny n&aacute;kupy <strong>5%&nbsp;SLEVU</strong>. Pro z&iacute;sk&aacute;n&iacute; slevy je nutno <a href=\"#\">kliknout zde</a>&nbsp;a registrovat se.</p>',	'Jakýkoliv odkaz zde přesměruje na registraci. Jako \"neutrální\" odkaz jde použít znak #.'),
@@ -33,4 +34,5 @@ INSERT INTO `texts` (`id`, `nazev`, `obsah`, `poznamka`) VALUES
 
 INSERT INTO `users` (`id`, `email`, `password`, `role`, `osoba`, `jmeno`, `prijmeni`, `ico`, `nazev`, `mobil`, `adresa_fakturacni`, `adresa_dorucovaci`, `newsletter`, `last_login`, `active`) VALUES
 (1,	'GLOBÁLNÍ SLEVA',	'',	'',	'',	'',	'',	'',	'',	'',	'',	'',	NULL,	'0000-00-00',	0),
-(2,	'a@a.cz',	'$2y$10$Qr792AMjBkG1n1tLTbodfuIad37.yC9VH5HSxAKsBRgaXkupfL7nC',	'zakaznik',	'spotrebitel',	'a',	'b',	'',	'',	'123',	'abcdefg 123\nhijkl\n789 09',	'abcdefg 123\nhijkl\n789 09',	1,	'2014-11-24',	1);
+(2,	'a@a.cz',	'$2y$10$Qr792AMjBkG1n1tLTbodfuIad37.yC9VH5HSxAKsBRgaXkupfL7nC',	'zakaznik',	'spotrebitel',	'a',	'b',	'',	'',	'123',	'abcdefg 123\nhijkl\n789 09',	'abcdefg 123\nhijkl\n789 09',	1,	'2014-11-24',	1),
+(3,	'admin@admin.cz',	'$2y$10$uBtfvMJPtEd1O024nyppfu8dCSRMG2Qzj.YVKuPhm163qb91vTury',	'administrator',	'spotrebitel',	'admin',	'administrator',	'',	'',	'0987654',	'Administratorska ulice\nAdmini\n',	'Administratorska ulice\nAdmini\n',	1,	'2014-11-25',	1);

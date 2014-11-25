@@ -28,8 +28,8 @@ ADD php-fpm.service /etc/service/php-fpm/run
 ADD nginx.service /etc/service/nginx/run
 
 # add mysql scripts
-ADD forte.sql /root/forte.sql
-ADD globalni_slevy.sql /root/globalni_slevy.sql
+ADD init_tables.sql /root/init_tables.sql
+ADD init_data.sql /root/init_data.sql
 ADD init_db.sh /etc/my_init.d/01_init_db.sh
 RUN chmod 755 /etc/my_init.d/01_init_db.sh
 

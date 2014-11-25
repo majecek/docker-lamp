@@ -2,5 +2,5 @@
 /usr/bin/mysqld_safe &
 sleep 5
 mysql -u root -e "CREATE DATABASE forte"
-mysql -u root forte < /root/forte.sql
-mysql -u root forte < /root/globalni_slevy.sql
+mysql -u root forte < /root/init_tables.sql
+mysql -u root forte < /root/init_data.sql
